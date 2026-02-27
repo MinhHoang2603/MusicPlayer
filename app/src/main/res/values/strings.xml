@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Music Player</string>
+    <string name="back">back</string>
+    <string name="playing_now_text">Playing Now</string>
+    <string name="name_song_text">name song</string>
+    <string name="author_song_text">author song</string>
+    <string name="like_text">like</string>
+    <string name="volume">volume</string>
+    <string name="eva_shuffle">shuffle</string>
+    <string name="time_present">00:00</string>
+    <string name="song_time">00:00</string>
+    <string name="pause">pause</string>
+    <string name="next">next</string>
+    <string name="before">before</string>
+    <string name="before_song">before song</string>
+    <string name="after_song">after song</string>
+    <string name="present_song">present song</string>
 </resources>
