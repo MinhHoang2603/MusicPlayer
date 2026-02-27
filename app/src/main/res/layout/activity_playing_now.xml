@@ -44,24 +44,36 @@
         app:layout_constraintTop_toBottomOf="@id/playing_text">
 
         <ImageView
+            android:id="@+id/img_before_song"
             android:layout_width="229dp"
             android:layout_height="229dp"
             android:contentDescription="@string/before_song"
-            android:background="@color/white"/>
+            android:src="@drawable/img_the_luong"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_img"
+            android:clipToOutline="true"/>
 
         <ImageView
+            android:id="@+id/img_present_song"
             android:layout_width="261dp"
             android:layout_height="261dp"
             android:contentDescription="@string/present_song"
             android:layout_marginStart="22dp"
             android:layout_marginEnd="22dp"
-            android:background="@color/white"/>
+            android:src="@drawable/img_duyen_troi_lay_2"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_img"
+            android:clipToOutline="true"/>
 
         <ImageView
+            android:id="@+id/img_next_song"
             android:layout_width="229dp"
             android:layout_height="229dp"
             android:contentDescription="@string/after_song"
-            android:background="@color/white"/>
+            android:src="@drawable/img_em_khac_gi_hoa"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_img"
+            android:clipToOutline="true"/>
 
     </LinearLayout>
 
@@ -81,7 +93,7 @@
         android:id="@+id/author_song"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textColor="@color/hint_text_color"
         android:text="@string/author_song_text"
         android:layout_marginTop="4dp"
@@ -165,7 +177,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
     
     <View
-        android:id="@+id/line_song"
+        android:id="@+id/time_line"
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@drawable/line"
@@ -175,15 +187,25 @@
         app:layout_constraintTop_toBottomOf="@id/time_song"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-    
-    <View
+
+    <FrameLayout
         android:id="@+id/circle_song"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:background="@drawable/ic_circle"
-        app:layout_constraintStart_toStartOf="@id/line_song"
-        app:layout_constraintTop_toTopOf="@id/line_song"
-        app:layout_constraintBottom_toBottomOf="@id/line_song"/>
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="-8dp"
+        app:layout_constraintStart_toStartOf="@id/time_line"
+        app:layout_constraintTop_toTopOf="@id/time_line"
+        app:layout_constraintBottom_toBottomOf="@id/time_line">
+
+        <View
+            android:id="@+id/circle"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_circle"/>
+
+    </FrameLayout>
+
 
     <ImageView
         android:id="@+id/pause_button"
@@ -195,7 +217,7 @@
         android:layout_marginTop="76dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line_song"/>
+        app:layout_constraintTop_toBottomOf="@id/time_line"/>
 
     <ImageView
         android:id="@+id/before_button"
@@ -207,7 +229,7 @@
         android:layout_marginTop="76dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintEnd_toStartOf="@id/pause_button"
-        app:layout_constraintTop_toBottomOf="@id/line_song"/>
+        app:layout_constraintTop_toBottomOf="@id/time_line"/>
 
     <ImageView
         android:id="@+id/next_button"
@@ -219,6 +241,6 @@
         android:layout_marginTop="76dp"
         app:layout_constraintStart_toEndOf="@id/pause_button"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line_song"/>
+        app:layout_constraintTop_toBottomOf="@id/time_line"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
